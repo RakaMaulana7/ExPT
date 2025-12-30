@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - ElektroTech Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 8s ease infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="elektrotech-modern.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-orange-600 rounded-lg flex items-center justify-center shadow-md">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-2xl font-bold text-gray-900">Elektro<span class="text-primary-500">Tech</span></span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="elektrotech-modern.html#home" class="text-gray-600 hover:text-primary-500 transition-colors duration-300 font-medium">Beranda</a>
+                    <a href="elektrotech-modern.html#services" class="text-gray-600 hover:text-primary-500 transition-colors duration-300 font-medium">Layanan</a>
+                    <a href="tentang-kami-modern.html" class="text-primary-500 font-semibold">Tentang Kami</a>
+                    <a href="elektrotech-modern.html#pricing" class="text-gray-600 hover:text-primary-500 transition-colors duration-300 font-medium">Harga</a>
+                    <a href="elektrotech-modern.html#contact" class="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-orange-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-900" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
+            <div class="px-4 py-4 space-y-3">
+                <a href="elektrotech-modern.html#home" class="block text-gray-600 hover:text-primary-500 transition-colors font-medium">Beranda</a>
+                <a href="elektrotech-modern.html#services" class="block text-gray-600 hover:text-primary-500 transition-colors font-medium">Layanan</a>
+                <a href="tentang-kami-modern.html" class="block text-primary-500 font-semibold">Tentang Kami</a>
+                <a href="elektrotech-modern.html#pricing" class="block text-gray-600 hover:text-primary-500 transition-colors font-medium">Harga</a>
+                <a href="elektrotech-modern.html#contact" class="block text-center px-6 py-2.5 bg-gradient-to-r from-primary-500 to-orange-600 text-white rounded-full font-semibold">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Split Screen 50:50 -->
+    <section class="relative h-screen flex items-stretch pt-20">
+        <!-- Left Side - Content -->
+        <div class="w-full lg:w-1/2 flex pt-5 bg-gradient-to-br from-orange-50 via-white to-blue-50 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-primary-200 rounded-full filter blur-3xl"></div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl"></div>
+            </div>
+            
+            <div class="max-w-2xl mx-auto px-8 sm:px-12 lg:px-16 relative z-10">
+                <span class="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-semibold mb-6">
+                    TENTANG KAMI
+                </span>
+                <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                    <span class="text-gray-900">Membangun Masa Depan</span>
+                    <br/>
+                    <span class="bg-gradient-to-r from-primary-500 via-orange-500 to-primary-600 bg-clip-text text-transparent animate-gradient">
+                        Elektronik Indonesia
+                    </span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-10">
+                    Sejak 2019, kami telah melayani lebih dari 15.000 pelanggan dengan solusi elektronik berkualitas tinggi dan layanan profesional yang terpercaya
+                </p>
+                <div class="grid grid-cols-3 gap-6">
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-primary-500">15K+</div>
+                        <div class="text-gray-600 text-sm mt-1">Pelanggan Puas</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-primary-500">2000+</div>
+                        <div class="text-gray-600 text-sm mt-1">Proyek Selesai</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-primary-500">5+</div>
+                        <div class="text-gray-600 text-sm mt-1">Tahun Beroperasi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                <div class="hidden lg:block lg:w-1/2 relative min-h-full">
+                    <img 
+                        src="image.png" 
+                        alt="Deskripsi Foto" 
+                        class="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div class="absolute inset-0 z-10 pointer-events-none">
+                                <div class="absolute top-1/4 left-10 animate-float">>
+                                </div>
+                                <div class="absolute bottom-10 left-10 bg-white rounded-2xl p-6 shadow-2xl max-w-xs">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-orange-600 rounded-xl flex items-center justify-center">
+                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <div class="text-2xl font-bold text-gray-900">50+</div>
+                                            <div class="text-sm text-gray-600">Teknisi Profesional</div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        <div class="absolute bottom-1/4 right-10 animate-float" style="animation-delay: 1s;">
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-semibold mb-6">
+                        PERJALANAN KAMI
+                    </span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Dari Passion Menjadi <span class="text-primary-500">Profesional</span>
+                    </h2>
+                    <div class="space-y-6 text-gray-600 leading-relaxed text-lg">
+                        <p>
+                            ElektroTech lahir dari passion seorang teknisi muda yang ingin memberikan solusi elektronik berkualitas dengan harga terjangkau untuk masyarakat Indonesia. Dimulai dari garasi rumah dengan 2 orang teknisi, kini kami telah berkembang menjadi perusahaan dengan 50+ tenaga profesional.
+                        </p>
+                        <p>
+                            Kami percaya bahwa setiap rumah dan bisnis berhak mendapatkan instalasi elektronik yang aman, berkualitas, dan terpercaya. Dengan dedikasi tinggi dan komitmen pada kepuasan pelanggan, kami terus berinovasi untuk memberikan layanan terbaik.
+                        </p>
+                        <p>
+                            Hingga saat ini, kami telah menyelesaikan lebih dari 2.000 proyek di berbagai kota di Indonesia, dari instalasi listrik rumah sederhana hingga sistem keamanan CCTV untuk gedung perkantoran.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl font-bold text-primary-500 mb-2">2019</div>
+                                <div class="text-gray-900 font-semibold mb-1">Berdiri</div>
+                                <div class="text-gray-500 text-sm">Memulai dari garasi rumah</div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl font-bold text-primary-500 mb-2">500+</div>
+                                <div class="text-gray-900 font-semibold mb-1">Proyek Pertama</div>
+                                <div class="text-gray-500 text-sm">Di tahun pertama</div>
+                            </div>
+                        </div>
+                        <div class="space-y-6 mt-12">
+                            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl font-bold text-primary-500 mb-2">2021</div>
+                                <div class="text-gray-900 font-semibold mb-1">Ekspansi</div>
+                                <div class="text-gray-500 text-sm">10+ kota di Indonesia</div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                                <div class="text-4xl font-bold text-primary-500 mb-2">2024</div>
+                                <div class="text-gray-900 font-semibold mb-1">15K+ Klien</div>
+                                <div class="text-gray-500 text-sm">Pelanggan puas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Gallery -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-semibold mb-6">
+                    GALERI PERUSAHAAN
+                </span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Lihat <span class="text-primary-500">Tim & Fasilitas</span> Kami
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Fasilitas modern dan tim profesional untuk melayani Anda dengan terbaik
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 - Office -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-video bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <svg class="w-24 h-24 mx-auto text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                            <p class="text-blue-900 font-semibold">Kantor Pusat</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-bold mb-1">Kantor Modern</h3>
+                        <p class="text-sm text-gray-200">Fasilitas lengkap untuk operasional</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 - Team -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-video bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <svg class="w-24 h-24 mx-auto text-green-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                            <p class="text-green-900 font-semibold">Tim Profesional</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-bold mb-1">Tim Ahli</h3>
+                        <p class="text-sm text-gray-200">50+ teknisi bersertifikat</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 - Tools -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-video bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <svg class="w-24 h-24 mx-auto text-purple-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <p class="text-purple-900 font-semibold">Peralatan Modern</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-bold mb-1">Tools Profesional</h3>
+                        <p class="text-sm text-gray-200">Peralatan berkualitas tinggi</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 - Workshop -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-video bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <svg class="w-24 h-24 mx-auto text-orange-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                            </svg>
+                            <p class="text-orange-900 font-semibold">Workshop</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-bold mb-1">Workshop Lengkap</h3>
+                        <p class="text-sm text-gray-200">Tempat training dan service</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 - Projects -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-video bg-gradient-to-br from-yellow-100 to-amber-100 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <svg class="w-24 h-24 mx-auto text-yellow-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                            </svg>
+                            <p class="text-yellow-900 font-semibold">Proyek Kami</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-bold mb-1">Portfolio Proyek</h3>
+                        <p class="text-sm text-gray-200">2000+ proyek selesai</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 - Certificates -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-video bg-gradient-to-br from-indigo-100 to-blue-100 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <svg class="w-24 h-24 mx-auto text-indigo-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                            <p class="text-indigo-900 font-semibold">Sertifikasi</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="text-xl font-bold mb-1">Sertifikat Resmi</h3>
+                        <p class="text-sm text-gray-200">ISO & SNI certified</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Mission Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-semibold mb-6">
+                    VISI & MISI
+                </span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Tujuan & <span class="text-primary-500">Komitmen Kami</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Vision -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 group border border-blue-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-3xl font-bold text-gray-900 mb-4">Visi Kami</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Menjadi perusahaan jasa elektronik terdepan di Indonesia yang dikenal dengan kualitas, inovasi, dan layanan pelanggan yang luar biasa. Kami berkomitmen untuk membawa teknologi elektronik modern ke setiap rumah dan bisnis dengan harga yang terjangkau.
+                    </p>
+                </div>
+
+                <!-- Mission -->
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 group border border-orange-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-3xl font-bold text-gray-900 mb-4">Misi Kami</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start text-gray-700">
+                            <svg class="w-6 h-6 text-primary-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Memberikan layanan instalasi dan penjualan elektronik berkualitas tinggi</span>
+                        </li>
+                        <li class="flex items-start text-gray-700">
+                            <svg class="w-6 h-6 text-primary-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Melatih teknisi profesional dengan standar internasional</span>
+                        </li>
+                        <li class="flex items-start text-gray-700">
+                            <svg class="w-6 h-6 text-primary-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Menjaga kepuasan dan kepercayaan pelanggan sebagai prioritas utama</span>
+                        </li>
+                        <li class="flex items-start text-gray-700">
+                            <svg class="w-6 h-6 text-primary-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Terus berinovasi mengikuti perkembangan teknologi terkini</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-semibold mb-6">
+                    NILAI-NILAI KAMI
+                </span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Apa yang Kami <span class="text-primary-500">Yakini</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Nilai-nilai inti yang membentuk budaya perusahaan dan cara kami bekerja
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Value 1 -->
+                <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer border border-gray-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Integritas</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Kejujuran dan transparansi dalam setiap layanan yang kami berikan kepada pelanggan
+                    </p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer border border-gray-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Kualitas</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Menggunakan material terbaik dan standar kerja tertinggi untuk hasil maksimal
+                    </p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer border border-gray-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Teamwork</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Kolaborasi tim yang solid untuk memberikan solusi terbaik bagi pelanggan
+                    </p>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer border border-gray-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Inovasi</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Selalu mengikuti perkembangan teknologi untuk solusi yang lebih baik
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-semibold mb-6">
+                    TIM KAMI
+                </span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Orang-Orang di Balik <span class="text-primary-500">Kesuksesan Kami</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Tim profesional yang berdedikasi untuk memberikan layanan terbaik
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-500 group border border-gray-200">
+                    <div class="w-32 h-32 bg-gradient-to-br from-primary-500 to-orange-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform shadow-xl">
+                        AR
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Ahmad Rizal</h3>
+                    <p class="text-primary-500 font-semibold mb-4">Founder & CEO</p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Visioner di balik ElektroTech dengan pengalaman 10+ tahun di industri elektronik
+                    </p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-500 group border border-gray-200">
+                    <div class="w-32 h-32 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform shadow-xl">
+                        SW
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Siti Wulandari</h3>
+                    <p class="text-blue-500 font-semibold mb-4">Operations Manager</p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Memastikan setiap proyek berjalan lancar dengan standar kualitas tertinggi
+                    </p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-500 group border border-gray-200">
+                    <div class="w-32 h-32 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mx-auto mb-6 group-hover:scale-110 transition-transform shadow-xl">
+                        BP
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Budi Prasetyo</h3>
+                    <p class="text-green-500 font-semibold mb-4">Lead Technician</p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Teknisi senior dengan sertifikasi internasional, melatih tim teknisi kami
+                    </p>
+                </div>
+            </div>
+
+            <!-- Team Stats -->
+            <div class="bg-gradient-to-r from-primary-500 to-orange-600 rounded-3xl p-12 shadow-2xl">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-white mb-2">50+</div>
+                        <div class="text-white/90">Teknisi Profesional</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-white mb-2">100%</div>
+                        <div class="text-white/90">Tersertifikasi</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-white mb-2">24/7</div>
+                        <div class="text-white/90">Support Tim</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-white mb-2">5+</div>
+                        <div class="text-white/90">Tahun Pengalaman</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-semibold mb-6">
+                    SERTIFIKASI & PENGHARGAAN
+                </span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Diakui oleh <span class="text-primary-500">Industri</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Komitmen kami pada kualitas dibuktikan dengan berbagai sertifikasi dan penghargaan
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="text-6xl mb-4">🏆</div>
+                    <h3 class="text-gray-900 font-bold mb-2">ISO 9001:2015</h3>
+                    <p class="text-gray-500 text-sm">Manajemen Kualitas</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="text-6xl mb-4">✓</div>
+                    <h3 class="text-gray-900 font-bold mb-2">SNI Certified</h3>
+                    <p class="text-gray-500 text-sm">Standar Nasional Indonesia</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="text-6xl mb-4">⭐</div>
+                    <h3 class="text-gray-900 font-bold mb-2">Best Service 2023</h3>
+                    <p class="text-gray-500 text-sm">Indonesia Service Award</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="text-6xl mb-4">🔒</div>
+                    <h3 class="text-gray-900 font-bold mb-2">Safety Certified</h3>
+                    <p class="text-gray-500 text-sm">K3 & Keselamatan Kerja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-primary-600 via-orange-600 to-primary-700 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle, #fff 2px, transparent 2px); background-size: 40px 40px;"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="font-display text-4xl md:text-6xl font-bold text-white mb-6">
+                Siap Bekerja Sama dengan Kami?
+            </h2>
+            <p class="text-xl text-white/95 mb-10 leading-relaxed">
+                Bergabunglah dengan 15.000+ pelanggan puas yang telah mempercayai ElektroTech untuk kebutuhan elektronik mereka
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="elektrotech-modern.html#contact" class="group px-8 py-4 bg-white text-primary-600 rounded-full font-bold text-lg flex items-center justify-center space-x-2 hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                    <span>Hubungi Kami</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+                <a href="elektrotech-modern.html#services" class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-primary-600 transition-all duration-300 text-center">
+                    Lihat Layanan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-orange-600 rounded-lg flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <span class="font-display text-xl font-bold text-white">Elektro<span class="text-primary-500">Tech</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Solusi elektronik modern dan terpercaya untuk rumah dan bisnis Anda sejak 2019.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navigasi</h4>
+                    <ul class="space-y-2">
+                        <li><a href="elektrotech-modern.html#home" class="text-gray-400 hover:text-primary-500 transition-colors">Beranda</a></li>
+                        <li><a href="elektrotech-modern.html#services" class="text-gray-400 hover:text-primary-500 transition-colors">Layanan</a></li>
+                        <li><a href="tentang-kami-modern.html" class="text-gray-400 hover:text-primary-500 transition-colors">Tentang Kami</a></li>
+                        <li><a href="elektrotech-modern.html#pricing" class="text-gray-400 hover:text-primary-500 transition-colors">Harga</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="elektrotech-modern.html#services" class="text-gray-400 hover:text-primary-500 transition-colors">Instalasi Listrik</a></li>
+                        <li><a href="elektrotech-modern.html#services" class="text-gray-400 hover:text-primary-500 transition-colors">AC & Pendingin</a></li>
+                        <li><a href="elektrotech-modern.html#services" class="text-gray-400 hover:text-primary-500 transition-colors">Home Theater</a></li>
+                        <li><a href="elektrotech-modern.html#services" class="text-gray-400 hover:text-primary-500 transition-colors">CCTV & Security</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <span class="mr-2">📍</span>
+                            <span>Jakarta, Indonesia</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">📞</span>
+                            <span>+62 812-3456-7890</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">✉️</span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="94fdfaf2fbd4f1f8f1ffe0e6fbe0f1f7fcbafdf0">[email&#160;protected]</a></span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">🕐</span>
+                            <span>Sen - Sab: 8AM - 8PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 ElektroTech Indonesia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
